@@ -95,6 +95,15 @@ a,a:focus,a:hover{
     -moz-box-shadow: -1px -1px 376px -55px rgba(0,0,0,0.75);
     font-weight: 400;
 }
+.search-btn {
+    border: 1px solid #d7b4b4;
+    background-color: #fff;
+    border-radius: 0 2px 2px 0;
+    cursor: pointer;
+    height: 34px;
+    width: 64px;
+    margin: 0;
+}
 
 .search-box:focus {
     outline: none;

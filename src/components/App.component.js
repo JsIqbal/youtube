@@ -16,22 +16,19 @@ class App extends Component {
 
     handleChange = ({ target: { value: searchTerm } }) => this.setState({ ...this.state, searchTerm });
 
-    componentDidUpdate = (prevProps, prevState) => {
-        const getYoutubeVideos = () => {
-            const baseUrl = 'https://www.googleapis.com/youtube/v3/search?key=';
-            const key = 'AIzaSyDy0gwPVxxNKosoGXP2a-luyAP-YVd-OdQ&type=';
-            const type = 'video&part=';
-            const part = 'snippet&q=';
-            const q = this.state.searchTerm;
-            
-            const url = `${baseUrl}${key}${type}${part}${q}`;
+    trigger = () => {
+        console.log("triggered")
+        const baseUrl = 'https://www.googleapis.com/youtube/v3/search?key=';
+        const key = 'AIzaSyBd4SOTYQlu-tCyW6PsPmt0_1XSUB-WCoY&type=';
+        const type = 'video&part=';
+        const part = 'snippet&q=';
+        const q = this.state.searchTerm;
+        
+        const url = `${baseUrl}${key}${type}${part}${q}`;
 
-            axios.get(url)
-                .then(({ data }) => this.setState({ ...this.state, data }))
-                .catch(err => console.log(err));
-        }
-
-        if (prevState.searchTerm !== this.state.searchTerm) getYoutubeVideos();
+        axios.get(url)
+            .then(({ data }) => this.setState({ ...this.state, data }))
+            .catch(err => console.log(err));
     }
 
     handleSelect = (videoId, title, description) => this.setState({ ...this.state, videoId, title, description });
@@ -40,7 +37,12 @@ class App extends Component {
         return(
             <div className='container'>
                 <div className='row'>
-                    <Nav handleChange = { this.handleChange } />
+                    <span>
+                        <Nav 
+                            handleChange = { this.handleChange } 
+                            trigger = { this.trigger }
+                        />
+                    </span>
                 </div>
 
                 <div className='row'>

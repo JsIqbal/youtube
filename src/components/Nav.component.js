@@ -3,11 +3,14 @@ import SearchBar from './Top-navbar.component';
 
 class Nav extends Component {
     render() { 
-        const { handleChange } = this.props;
+        const { handleChange, trigger } = this.props;
 
         return (
             <div className='search-bar'>
-                <SearchBar handleChange = { handleChange } />
+                <SearchBar 
+                    handleChange = { handleChange } 
+                    trigger = { trigger }
+                />
             </div>
         );
     }
