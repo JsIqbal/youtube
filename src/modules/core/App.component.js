@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-import Nav from './Nav.component';
-import VideoDetails from './video_detail.component';
-import VideoList from './video_list.component';
+import { Nav, VideoDetails, VideoList } from '../youtube';
 
 class App extends Component {
     state = {

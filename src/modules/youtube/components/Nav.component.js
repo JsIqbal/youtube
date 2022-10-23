@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SearchBar from './Top-navbar.component';
+import { SearchBar } from '../../youtube';
 
 class Nav extends Component {
     render() { 
