@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ListItem from './video-list-item.component';
+import { ListItem } from '../../youtube';
 
 class VideoList extends Component {
     render() { 
