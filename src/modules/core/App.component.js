@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+import env from 'react-dotenv';
+
 import { Nav, VideoDetails, VideoList } from '../youtube';
 
 class App extends Component {
@@ -17,7 +19,7 @@ class App extends Component {
     trigger = () => {
         console.log("triggered")
         const baseUrl = 'https://www.googleapis.com/youtube/v3/search?key=';
-        const key = 'AIzaSyBd4SOTYQlu-tCyW6PsPmt0_1XSUB-WCoY&type=';
+        const key = `${env.KEY}=`;
         const type = 'video&part=';
         const part = 'snippet&q=';
         const q = this.state.searchTerm;
