@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { SearchBar } from '../../youtube';
 
-class Nav extends Component {
-    render() { 
-        const { handleChange, trigger } = this.props;
+function Nav (props) {
+        const { handleChange, trigger } = props;
 
         return (
             <div className='search-bar'>
@@ -13,7 +12,6 @@ class Nav extends Component {
                 />
             </div>
         );
-    }
 }
 
 export default Nav;

@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 
-class SearchBar extends Component {
-    render() { 
-        const { handleChange, trigger } = this.props;
+function SearchBar (props) {
+        const { handleChange, trigger } = props;
 
         return (
             <div className='row'>
@@ -23,7 +22,6 @@ class SearchBar extends Component {
                 </div>
             </div>
         );
-    }
 }
  
 export default SearchBar;

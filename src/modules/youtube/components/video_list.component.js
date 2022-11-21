@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { ListItem } from '../../youtube';
 
-class VideoList extends Component {
-    render() { 
-        const { items, handleSelect } = this.props;
+function VideoList (props) {
+
+        const { items, handleSelect } = props;
         return (
             <div className='col-lg-4 vid-measure'>
             {
@@ -21,7 +21,6 @@ class VideoList extends Component {
             }
         </div>
         );
-    }
 }
  
 export default VideoList;
