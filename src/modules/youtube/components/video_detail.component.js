@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 
-class VideoDetails extends Component {
-    render() {
-        const { videoId, title, description } = this.props;
+function VideoDetails (props) {
+        const { videoId, title, description } = props;
         return (
             <div className='col-lg-8 mb-4'>
                 <div className='video'>
@@ -23,7 +22,6 @@ class VideoDetails extends Component {
                 </div>
             </div>
         );
-    }
 }
  
 export default VideoDetails;
