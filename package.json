@@ -1,7 +1,7 @@
 {
     "name": "video_browser",
     "version": "0.1.0",
-    "homepage": "https://JsIqbal.github.io/ivideo",
+    "homepage": "https://jsiqbal.github.io/ivideo",
     "private": true,
     "dependencies": {
         "axios": "^0.27.2",
